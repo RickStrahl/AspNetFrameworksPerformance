@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="false" Service="AspNetFrameworksPerformance.WcfService" CodeBehind="WcfService.svc.cs" %>

@@ -21,6 +21,8 @@ namespace AspNetFrameworksPerformance
             var formatters = GlobalConfiguration.Configuration.Formatters;
             formatters.Remove(formatters.XmlFormatter);
 
+            RouteTable.Routes.Ignore("nancy/{*pathInfo}");
+
             // API route - make sure this gets defined *BEFORE* MVC routes            
             RouteTable.Routes.MapHttpRoute(
                 name: "WebApiPerformanceAction",
@@ -33,8 +35,10 @@ namespace AspNetFrameworksPerformance
                 }
             );
 
+
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
 
         }

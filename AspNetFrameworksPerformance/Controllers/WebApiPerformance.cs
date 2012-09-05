@@ -15,7 +15,7 @@ namespace AspNetFrameworksPerformance.Controllers
         [HttpGet]
         public HttpResponseMessage HelloWorldCode()
         {
-            return new HttpResponseMessage() 
+            return new HttpResponseMessage(HttpStatusCode.OK) 
             { Content = new StringContent("Hello World. Time is: " + DateTime.Now.ToString(), Encoding.UTF8, "text/plain") };
         }
 

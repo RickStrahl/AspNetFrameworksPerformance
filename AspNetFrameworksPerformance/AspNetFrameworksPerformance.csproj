@@ -136,13 +136,6 @@
     <Compile Include="HelloWorld_CodeBehind.aspx.designer.cs">
       <DependentUpon>HelloWorld_CodeBehind.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HelloWorld_Markup.aspx.cs">
-      <DependentUpon>HelloWorld_Markup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HelloWorld_Markup.aspx.designer.cs">
-      <DependentUpon>HelloWorld_Markup.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WcfService.svc.cs">
       <DependentUpon>WcfService.svc</DependentUpon>

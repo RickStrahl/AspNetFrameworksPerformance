@@ -1,0 +1,23 @@
+<configuration>
+  <system.web>
+    <pages>
+      <namespaces>
+        <add namespace="Westwind.Utilities"/>
+        <add namespace="Westwind.Web" />
+      </namespaces>
+      <controls>        
+        <add tagPrefix="ww" namespace="Westwind.Web.Controls" assembly="Westwind.Web" />        
+      </controls>
+    </pages>    
+    <httpModules>
+      <add name="ScriptCompressionModule" type="Westwind.Web.ScriptCompressionModule,Westwind.Web" />
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules>
+      <add name="ScriptCompressionModule" type="Westwind.Web.ScriptCompressionModule,Westwind.Web" />
+    </modules>
+  </system.webServer>
+</configuration>
+

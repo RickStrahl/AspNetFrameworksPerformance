@@ -17,6 +17,7 @@ ab.exe -n100000 -c20 http://localhost/AspNetPerf/WcfService.svc/HelloWorld > Wcf
 ab.exe -n100000 -c20 http://localhost/aspnetperf/MvcPerformance/HelloWorldCode > Mvc.txt
 ab.exe -n100000 -c20 http://localhost/aspnetperf/api/HelloWorld > WebApi.txt
 ab.exe -n100000 -c20 http://localhost/AspNetPerf/WestWindCallbackHandler.ashx?Method=HelloWorld > WestWindCallback.txt
+ab.exe -n100000 -c20 http://localhost/AspNetPerf/nancy/HelloWorldCode > NancyCode.txt
 
 REM JSON RESPONSES
 ab.exe -n100000 -c20 http://localhost/aspnetperf/Handler.ashx?action=json > HandlerJson.txt
@@ -24,5 +25,6 @@ ab.exe -n100000 -c20 http://localhost/aspnetperf/MvcPerformance/HelloWorldJson >
 ab.exe -n100000 -c20 http://localhost/aspnetperf/api/HelloWorldJson > WebApiJson.txt 
 ab.exe -n100000 -c20 http://localhost/AspNetPerf/WcfService.svc/HelloWorldJson > WcfJson.txt
 ab.exe -n100000 -c20 http://localhost/AspNetPerf/WestWindCallbackHandler.ashx?Method=HelloWorldJson > WestWindCallbackJson.txt
+ab.exe -n100000 -c20 http://localhost/AspNetPerf/nancy/HelloWorldCode > NancyJson.txt
 
 pause

@@ -17,10 +17,11 @@ namespace AspNetFrameworksPerformance
         protected void Application_Start()
         {
             //AreaRegistration.RegisterAllAreas();
-            //var formatters = GlobalConfiguration.Configuration.Formatters;
-            //formatters.Remove(formatters.XmlFormatter);
 
-            // make sure this gets defined before MVC routes
+            var formatters = GlobalConfiguration.Configuration.Formatters;
+            formatters.Remove(formatters.XmlFormatter);
+
+            // API route - make sure this gets defined *BEFORE* MVC routes            
             RouteTable.Routes.MapHttpRoute(
                 name: "WebApiPerformanceAction",
                 routeTemplate: "api/{action}",

@@ -8,14 +8,12 @@ C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.Http.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.Http.WebHost.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.Mvc.dll
-C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.Optimization.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.Razor.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.WebPages.Deployment.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.WebPages.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.WebPages.Razor.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Westwind.Utilities.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Westwind.Web.dll
-C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Newtonsoft.Json.pdb
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Newtonsoft.Json.xml
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Net.Http.xml
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Net.Http.Formatting.xml
@@ -30,6 +28,9 @@ C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\System.Web.WebPages.Razor.xml
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Westwind.Utilities.xml
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Westwind.Web.xml
-C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\obj\Release\AspNetFrameworksPerformance.csprojResolveAssemblyReference.cache
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\obj\Release\AspNetFrameworksPerformance.dll
 C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\obj\Release\AspNetFrameworksPerformance.pdb
+C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\obj\Release\AspNetFrameworksPerformance.csprojResolveAssemblyReference.cache
+C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Antlr3.Runtime.dll
+C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Microsoft.Web.Optimization.dll
+C:\Projects2010\articles\AspNetFrameworksPerformance\AspNetFrameworksPerformance\bin\Microsoft.Web.Infrastructure.dll

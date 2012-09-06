@@ -1,1 +1,0 @@
-ab.exe -n100000 -c20 http://localhost/aspnetperf/api/HelloWorldJson

@@ -4,6 +4,8 @@ REM make sure you add
 REM C:\Program Files (x86)\Apache Software Foundation\Apache2.2\bin
 REM to your path so ab.exe can be found
 
+del *.txt
+
 REM Warm up
 ab.exe -n100 -c20 http://localhost/aspnetperf/MvcPerformance/HelloWorldJson
 ab.exe -n100 -c20 http://localhost/aspnetperf/api/HelloWorldJson
@@ -34,4 +36,5 @@ abParse -i"*.txt" -o"AbParseResults.html" -m"html"
 abParse -i"*.txt" -o"AbParseResults.csv" -m"csv"
 abParse -i"*.txt" -o"AbParseResults.xml" -m"xml"
 
+abparseresults.html
 pause

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Diagnostics;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,19 @@ namespace AspNetFrameworksPerformance.Controllers
         [HttpGet]
         public HttpResponseMessage HelloWorldCode()
         {
+            string output = "Hello cruel World. " + DateTime.Now.ToString();
+                            
+
             return new HttpResponseMessage(HttpStatusCode.OK) 
-            { Content = new StringContent("Hello World. Time is: " + DateTime.Now.ToString(), Encoding.UTF8, "text/plain") };
+            { Content = new StringContent(output, Encoding.UTF8, "text/plain") };
         }
+
+        [HttpGet]
+        public string WorkingSet()
+        {
+            return "Asp.NET - Working set is: " + Process.GetCurrentProcess().WorkingSet.ToString("n0") + " bytes";            
+        }
+
 
         [HttpGet]
         public Person HelloWorldJson()

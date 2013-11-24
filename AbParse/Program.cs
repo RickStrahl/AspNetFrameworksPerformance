@@ -113,6 +113,7 @@ AbParse -i""InputFilePathOrWildCard"" -o""OutputFile"" -m""OutputMode""
     </head>
     <body>
     <h1>Apache Bench Test Results</h1>
+    <small><i>Requests per second</i></small>
     <hr />    
 ";
 

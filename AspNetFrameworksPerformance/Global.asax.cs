@@ -37,6 +37,8 @@ namespace AspNetFrameworksPerformance
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            // use JSON.NET for serialization
+            //Westwind.Web.JsonSerializers.JSONSerializer.DefaultJsonParserType = Westwind.Web.JsonSerializers.SupportedJsonParserTypes.JsonNet;
         }
     }
 }

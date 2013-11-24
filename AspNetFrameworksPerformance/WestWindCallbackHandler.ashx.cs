@@ -12,7 +12,6 @@ namespace AspNetFrameworksPerformance
     /// </summary>
     public class WestWindCallbackHandler : CallbackHandler
     {
-
         [CallbackMethod]
         public string HelloWorld()
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -68,7 +69,7 @@ AbParse -i""InputFilePathOrWildCard"" -o""OutputFile"" -m""OutputMode""
                         var req = StringUtils.ExtractString(line, ":", "[");
                         req = req.Trim();
                         decimal rps = 0;
-                        decimal.TryParse(req, out rps);
+                        decimal.TryParse(req, NumberStyles.Any, NumberFormatInfo.InvariantInfo, out rps);
                         testInfo.RequestsPerSecond = rps;
                     }
 

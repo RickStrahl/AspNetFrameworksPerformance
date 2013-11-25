@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbParse", "AbParse\AbParse.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliosSample", "HeliosSample\HeliosSample.csproj", "{FC61909E-38A4-43D0-8DCD-F0072B37B687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NowinSample", "NowinSample\NowinSample.csproj", "{B93C6B61-24C3-4732-AC4D-9A42FA05BC8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{FC61909E-38A4-43D0-8DCD-F0072B37B687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC61909E-38A4-43D0-8DCD-F0072B37B687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC61909E-38A4-43D0-8DCD-F0072B37B687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93C6B61-24C3-4732-AC4D-9A42FA05BC8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93C6B61-24C3-4732-AC4D-9A42FA05BC8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93C6B61-24C3-4732-AC4D-9A42FA05BC8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93C6B61-24C3-4732-AC4D-9A42FA05BC8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,22 +31,26 @@ namespace AspNetFrameworksPerformance.Controllers
 
 
         [HttpGet]
-        public Person HelloWorldJson()
+        public Person HelloWorldJsonTypedResult()
         {
             return new Person();
         }
 
         [HttpGet]
-        public HttpResponseMessage HelloWorldJson2()
+        public HttpResponseMessage HelloWorldJsonCreateResponse()
+        {
+            var response = new HttpResponseMessage(HttpStatusCode.OK);
+            Request.CreateResponse<Person>(HttpStatusCode.OK, new Person());
+            return response;
+        }
+
+        [HttpGet]
+        public HttpResponseMessage HelloWorldJsonManualResponse()
         {
             var response = new HttpResponseMessage(HttpStatusCode.OK);
             response.Content = new ObjectContent<Person>(new Person(),
                             GlobalConfiguration.Configuration.Formatters.JsonFormatter);
             return response;
-
-            //var response = new HttpResponseMessage(HttpStatusCode.OK);
-            //response.Content = new StringContent(JsonConvert.SerializeObject(new Person()),Encoding.UTF8,"application/json");
-            //return response;
         }
 
         [HttpGet]

@@ -62,6 +62,9 @@ AbParse -i""InputFilePathOrWildCard"" -o""OutputFile"" -m""OutputMode""
 
                 foreach (var line in lines)
                 {
+                    if (string.IsNullOrEmpty(line))
+                        continue;
+
                     //Requests per second:    174.14 [#/sec] (mean)
                     if (line.StartsWith("Requests per"))
                     {
@@ -71,6 +74,12 @@ AbParse -i""InputFilePathOrWildCard"" -o""OutputFile"" -m""OutputMode""
                         decimal.TryParse(req, out rps);
                         testInfo.RequestsPerSecond = rps;
                     }
+                    if (line.StartsWith("   (Connect"))             
+                    {
+                        var req = StringUtils.ExtractString(line, "(", ")",returnDelimiters: true);
+                        testInfo.FailedRequests = req;
+                    }
+
 
                 }
                 testInfoList.Add(testInfo);
@@ -108,33 +117,33 @@ AbParse -i""InputFilePathOrWildCard"" -o""OutputFile"" -m""OutputMode""
     <head>
         <style>
             body { font-family: verdana; }
-            td { padding: 5px; }
+            td,th { padding: 5px 12px;  }
+            th { background: #535353; color: white; font-weight: normal }
         </style>
     </head>
     <body>
-    <h1>Apache Bench Test Results</h1>
-    <small><i>Requests per second</i></small>
+    <h1>Apache Bench Test Results</h1>    
     <hr />    
 ";
 
             sb.AppendLine(html);
             sb.AppendLine("<table>");
+            sb.AppendLine("<tr><th>Name</th><th>Requests/sec</th><th>Errors<br><small>length errors ok</small></th></tr>");
             foreach (var testInfo in testInfoList.OrderByDescending(ti => ti.RequestsPerSecond))
             {
                 sb.AppendLine("\t<tr>");
 
                 sb.AppendLine("\t\t<td>" + testInfo.RequestName + "</td>");
                 sb.AppendLine("\t\t<td>" + testInfo.RequestsPerSecond.ToString("n2") + "</td>");
-
+                sb.AppendLine("\t\t<td>" + testInfo.FailedRequests.Trim() + "</td>");
                 sb.AppendLine("\t</tr>");
-
             }
-
-
 
             sb.AppendLine("</table>");
             sb.AppendLine("</body>\r\n</html>");
         }
+
+
         private static void WriteXmlOutput(List<TestInfo> testInfoList, StringBuilder sb)
         {
             // serialize to Xml
@@ -177,7 +186,12 @@ AbParse -i""InputFilePathOrWildCard"" -o""OutputFile"" -m""OutputMode""
     {
         public string RequestName { get; set; }
         public decimal RequestsPerSecond { get; set; }
+        public string FailedRequests { get; set; }
 
+        public TestInfo()
+        {
+            FailedRequests = string.Empty;
+        }
     }
 
     public class AbParseCommandLineParser : CommandLineParser

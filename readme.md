@@ -1,4 +1,4 @@
-#ASP.NET Frramework Performance Tests
+#ASP.NET Framework Performance Tests
 
 Sample code for post at:
 [ASP.NET Frameworks and Raw Throughput Performance](http://www.west-wind.com/weblog/)
@@ -14,6 +14,7 @@ type requests for several of ASP.NET's frameworks including:
 * WCF REST
 * Web API
 * Helios Server (pre-alpha)
+* Web API Self-Host
 
 It uses Apache's Benchmark tool (ab.exe) to test raw throughput performance
 running tests into text files for comparison.
@@ -25,6 +26,7 @@ the most realistic way to test performance.
 
 In order to do this:
 
+* You need to use IIS
 * Create an ApplicationPool for AspNetPerformance and set host permissions to NetworkService or System
 * Set up a virtual directory for AspNetPerf and set to the AppPool
 * For Helios set up another AppPool (Helios) and virtual directory HeliosSample

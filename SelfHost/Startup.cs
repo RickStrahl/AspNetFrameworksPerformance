@@ -4,21 +4,14 @@ using Microsoft.Owin;
 using System.Web.Http;
 using Owin;
 
-[assembly: OwinStartup(typeof(HeliosSample.Startup))]
+[assembly: OwinStartup(typeof(SelfHost.Startup))]
 
-namespace HeliosSample
+namespace SelfHost
 {
     public class Startup
     {
         public void Configuration(IAppBuilder app)
-        {
-            // Bug Workaround for 500 error
-            app.Use((ctx, continuation) =>
-            {
-                ((Action)ctx.Environment["server.DisableResponseBuffering"])();
-                return continuation();
-            });
-
+        {        
             //app.UseErrorPage();
             //app.UseWelcomePage();
 
@@ -33,10 +26,8 @@ namespace HeliosSample
                 context.Response.StatusCode = 200; 
                 context.Response.ContentType = "text/html";
 
-                await context.Response.WriteAsync("Hello World. Time is: " + DateTime.Now.ToString());
-                return;
                 
-                string header = "<html><body><h1>Helios Vars</h1>";
+                string header = "<html><body><h1>Selfhost Vars</h1>";
                 await context.Response.WriteAsync(header);
 
                 foreach (KeyValuePair<string, object> keyvalue in context.Environment)

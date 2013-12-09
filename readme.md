@@ -30,6 +30,8 @@ In order to do this:
 * Create an ApplicationPool for AspNetPerformance and set host permissions to NetworkService or System
 * Set up a virtual directory for AspNetPerf and set to the AppPool
 * For Helios set up another AppPool (Helios) and virtual directory HeliosSample
+* For Self-Host run SelfHost.exe out of SelfHost\bin\Release folder
+  Then uncomment the self-host tests on the bottom in ab_Helios.bat
 * Go to the LoadTests folder
 * Run the ab_perftests.bat or ab_helios.bat files as an Administrator
 * Best to open an Admin command prompt and run from there

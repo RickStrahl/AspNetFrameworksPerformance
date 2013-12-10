@@ -17,16 +17,15 @@ namespace AspNetFrameworksPerformance.Controllers
         public HttpResponseMessage HelloWorldCode()
         {
             string output = "Hello cruel World. " + DateTime.Now.ToString();
-                            
 
-            return new HttpResponseMessage(HttpStatusCode.OK) 
-            { Content = new StringContent(output, Encoding.UTF8, "text/plain") };
+
+            return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(output, Encoding.UTF8, "text/plain") };
         }
 
         [HttpGet]
         public string WorkingSet()
         {
-            return "Asp.NET - Working set is: " + Process.GetCurrentProcess().WorkingSet.ToString("n0") + " bytes";            
+            return "Asp.NET - Working set is: " + Process.GetCurrentProcess().WorkingSet.ToString("n0") + " bytes";
         }
 
 
@@ -39,8 +38,7 @@ namespace AspNetFrameworksPerformance.Controllers
         [HttpGet]
         public HttpResponseMessage HelloWorldJsonCreateResponse()
         {
-            var response = new HttpResponseMessage(HttpStatusCode.OK);
-            Request.CreateResponse<Person>(HttpStatusCode.OK, new Person());
+            var response = Request.CreateResponse<Person>(HttpStatusCode.OK, new Person());
             return response;
         }
 
@@ -57,11 +55,11 @@ namespace AspNetFrameworksPerformance.Controllers
         public HttpResponseMessage HelloWorldXml()
         {
             var response = new HttpResponseMessage(HttpStatusCode.OK);
-            response.Content = new ObjectContent<Person>(new Person(), 
+            response.Content = new ObjectContent<Person>(new Person(),
                     GlobalConfiguration.Configuration.Formatters.XmlFormatter);
 
             return response;
         }
-   }
+    }
 }
 

@@ -11,7 +11,7 @@ namespace HeliosSample
         {
             Id = 10;
             Name = "Rick";
-            Entered = new DateTime(2013, 1, 1);
+            Entered = DateTime.UtcNow;
         }
 
         public int Id { get; set; }

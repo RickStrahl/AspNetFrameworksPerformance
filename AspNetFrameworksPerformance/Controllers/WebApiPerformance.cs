@@ -17,8 +17,6 @@ namespace AspNetFrameworksPerformance.Controllers
         public HttpResponseMessage HelloWorldCode()
         {
             string output = "Hello cruel World. " + DateTime.Now.ToString();
-
-
             return new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(output, Encoding.UTF8, "text/plain") };
         }
 
@@ -27,7 +25,12 @@ namespace AspNetFrameworksPerformance.Controllers
         {
             return "Asp.NET - Working set is: " + Process.GetCurrentProcess().WorkingSet.ToString("n0") + " bytes";
         }
-
+        
+        [HttpGet]
+        public Person HelloWorldJson()
+        {
+            return new Person();
+        }
 
         [HttpGet]
         public Person HelloWorldJsonTypedResult()

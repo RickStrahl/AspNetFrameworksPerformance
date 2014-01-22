@@ -15,7 +15,8 @@ namespace HeliosSample
         {            
             return "Hello cruel World, " + name + ". " + DateTime.Now;            
         }
-
+        
+        
         [HttpGet]
         [Route("test/WorkingSet")]
         public string WorkingSet()
@@ -25,6 +26,7 @@ namespace HeliosSample
 
         [HttpGet]
         [Route("test/Person")]
+        [Route("test/HelloWorldJson")]        
         public Person GetPerson()
         {
             return new Person();

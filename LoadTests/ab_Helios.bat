@@ -54,11 +54,11 @@ ab.exe -n40000 -c20 http://localhost/aspnetperf/MvcPerformance/HelloWorldJson > 
 
 REM *** IMPORTANT:
 REM In order to run these run SelfHost.exe from the SelfHost project first
-REM ab.exe -n20 http://localhost:9000/
-REM ab.exe -n40000 -c20 http://localhost:9000/ > SelfHost.txt
+ab.exe -n20 http://localhost:9000/
+ab.exe -n40000 -c20 http://localhost:9000/ > SelfHost.txt
 
-REM ab.exe -n20 http://localhost:9000/test/HelloWorldJson/ 
-REM ab.exe -n40000 -c20 http://localhost:9000/test/HelloWorldJson/ > SelfHostJson.txt 
+ab.exe -n20 http://localhost:9000/test/HelloWorldJson/ 
+ab.exe -n40000 -c20 http://localhost:9000/test/HelloWorldJson/ > SelfHostJson.txt 
 
 abParse -i"*.txt" -o"AbParseResults.html" -m"html"
 abParse -i"*.txt" -o"AbParseResults.csv" -m"csv"
